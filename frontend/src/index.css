@@ -29,3 +29,9 @@
   * { @apply border-border; }
   body { @apply bg-background text-foreground; }
 }
+
+@layer components {
+  .input {
+    @apply bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 w-full;
+  }
+}

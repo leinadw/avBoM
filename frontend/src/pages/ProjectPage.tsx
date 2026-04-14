@@ -93,7 +93,7 @@ export default function ProjectPage() {
         <NavChip to={`/projects/${projectId}/summary`} icon={<BarChart2 size={14} />} label="Summary" />
         <NavChip to={`/projects/${projectId}/issuances`} icon={<ClipboardList size={14} />} label="Issuances & Revisions" />
         <NavChip to={`/projects/${projectId}/equipment-report`} icon={<FileText size={14} />} label="Equipment Report" />
-        <NavChip to={`/projects/${projectId}`} icon={<Settings size={14} />} label="Project Settings" onClick={() => {}} />
+        <NavChip to={`/projects/${projectId}/settings`} icon={<Settings size={14} />} label="Project Settings" />
       </div>
 
       {/* Project Settings Summary */}

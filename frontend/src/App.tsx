@@ -8,6 +8,7 @@ import SummaryPage from './pages/SummaryPage'
 import EquipmentDbPage from './pages/EquipmentDbPage'
 import IssuancesPage from './pages/IssuancesPage'
 import EquipmentReportPage from './pages/EquipmentReportPage'
+import ProjectSettingsPage from './pages/ProjectSettingsPage'
 import Layout from './components/Layout'
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="projects/:projectId/summary" element={<SummaryPage />} />
         <Route path="projects/:projectId/issuances" element={<IssuancesPage />} />
         <Route path="projects/:projectId/equipment-report" element={<EquipmentReportPage />} />
+        <Route path="projects/:projectId/settings" element={<ProjectSettingsPage />} />
         <Route path="equipment-db" element={<EquipmentDbPage />} />
       </Route>
     </Routes>
