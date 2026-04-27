@@ -19,5 +19,12 @@ class TokenResponse(BaseModel):
     user: UserOut
 
 
-class MicrosoftAuthRequest(BaseModel):
-    access_token: str  # MS Graph token from MSAL on frontend
+class RegisterRequest(BaseModel):
+    email: EmailStr
+    password: str
+    display_name: str
+
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str

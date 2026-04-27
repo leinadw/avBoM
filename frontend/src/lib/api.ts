@@ -26,8 +26,11 @@ api.interceptors.response.use(
 )
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
-export const authMicrosoft = (access_token: string) =>
-  api.post('/auth/microsoft', { access_token }).then((r) => r.data)
+export const authLogin = (email: string, password: string) =>
+  api.post('/auth/login', { email, password }).then((r) => r.data)
+
+export const authRegister = (email: string, password: string, display_name: string) =>
+  api.post('/auth/register', { email, password, display_name }).then((r) => r.data)
 
 // ── Equipment DB ──────────────────────────────────────────────────────────────
 export const listEquipment = (q?: string, category?: string, skip = 0, limit = 100) =>

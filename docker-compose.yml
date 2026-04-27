@@ -20,9 +20,6 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://avbom:avbom_pass@db:5432/avbom
       SECRET_KEY: change-me-in-production
-      AZURE_TENANT_ID: ${AZURE_TENANT_ID:-}
-      AZURE_CLIENT_ID: ${AZURE_CLIENT_ID:-}
-      AZURE_CLIENT_SECRET: ${AZURE_CLIENT_SECRET:-}
       FRONTEND_URL: http://localhost:5173
     ports:
       - "8000:8000"
@@ -37,8 +34,6 @@ services:
     build: ./frontend
     environment:
       VITE_API_URL: http://localhost:8000
-      VITE_AZURE_CLIENT_ID: ${AZURE_CLIENT_ID:-}
-      VITE_AZURE_TENANT_ID: ${AZURE_TENANT_ID:-}
     ports:
       - "5173:5173"
     volumes:
